@@ -1,0 +1,62 @@
+h1 {
+	font-weight: bolder;
+	font-size: 200px;
+	margin: 0px;
+}
+
+h2 {
+	font-weight: bolder; 
+	font-size: 100px;
+	margin: 0px;
+}
+
+h3 {
+	font-weight: bolder; 
+	font-size: 50px;
+	margin: 0px;
+}
+
+h1.indoor, h2.indoor, h3.indoor {
+    padding:0;
+    margin:0;
+    display:inline;
+}
+
+.minute-summary {
+    white-space: nowrap; 
+    width: 150%; 
+    overflow: hidden; 
+    padding-top:10px;
+}
+
+.daily-summary {
+    font-size: 20px; 
+    padding-left: 200px; 
+    padding-bottom: 15px; 
+    overflow: hidden; 
+    height: 25px;
+}
+
+#hourly-summary {
+    font-size: 35px;
+    font-style: italic; 
+    float: right; 
+    margin-right: 60px;
+    width: 90%; 
+    overflow: hidden; 
+    height: 45px;
+}
+
+.medium-text {
+    font-size:28px;
+}
+
+.hourly-time {
+    padding: 10px; 
+    font-weight: bold; 
+    color:black;
+}
+
+.pink-text {
+    color: #D1B3A1;
+}

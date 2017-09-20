@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+ <html class="no-js" lang="en" ng-app='MainApp' ng-cloak>
+    <!--<![endif]-->
+    <head>
+       <meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+       <title>Magic Mirror (Wall Based Tablet for Current Indoor Conditions and Time)</title>
+       <meta name="description" content="">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+       <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+       <link rel="stylesheet" href="/css/bootstrap.min.css">
+       <link rel="stylesheet" href="/css/font-awesome.min.css">
+       <link rel="stylesheet" href="/css/main.min.css">
+       <script type="text/javascript" src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+       <script type="text/javascript" src="/js/vendor/skycons.js"></script>
+       <script type="text/javascript" src="/js/app.min.js"></script>
+       <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       <![endif]-->
+    </head>
+    <body style="overflow:hidden;" ng-controller="indoorConditionsController">
+        <h1 id="dateBox" class="indoor">
+            <strong id="dayOfWeek">{{dayOfWeek}}</strong><br/>
+            <strong id="dayNumber">{{dayNumber}}</strong>
+        </h1>
+        <h1 id="time" class="indoor">{{time}}</h1>
+        <h2 id="date" class="indoor"></h2>
+        <h1 id="conditions" class="indoor">90&deg;F <span id="humidity">50%</span> </h1>
+        <div id="bottom-temps-container">
+            <h3 id="bedroom" class="indoor">Bed - <span class="pink-text">90&deg;F</span> <span id="humidity">50%</span></h3>
+            <h3 id="livingroom" class="indoor">Living - <span class="pink-text">90&deg;F</span> <span id="humidity">50%</span></h3>
+        </div>
+    </body>
+ </html>

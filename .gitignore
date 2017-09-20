@@ -1,0 +1,4 @@
+*.project
+*.sass-cache/
+*.settings/
+*node_modules/

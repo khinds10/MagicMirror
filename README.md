@@ -153,16 +153,33 @@ Run the test
 
 ## Supplies Needed
 
+**12" x 24" Acrylic See-Through Mirror, 3mm**
+
+![Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/mirror.jpg "Mirror")
+
+**Balsa wood strips 0.125 x 0.5 Inches**
+
+![Balsa Wood](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/balsawood.jpg "Balsa Wood")
+
+**ArtToFrames 12x24 inch Satin Black Picture Frame**
+
+![Picture Frame](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/frame.jpg "Picture Frame")
+
+**Android Tablets (x2)**
+
+![Android Tablet](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/tablet.jpg "Android Tablet")
+
 **DHT11 Humidistat**
 
-![DHT11 Humidistat](https://raw.githubusercontent.com/khinds10/EnvironmentClock/master/images/dht11.jpg "DHT11 Humidistat")
+![DHT11 Humidistat](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/dht11.jpg "DHT11 Humidistat")
 
 **RaspberriPi Zero (or Regular RaspberriPi should work)**
 
-![Pi Zero](https://raw.githubusercontent.com/khinds10/EnvironmentClock/master/images/pizero.jpg "Pi Zero")
+![Pi Zero](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/pizero.jpg "Pi Zero")
 
 ## Build and wire the device
-    
+
+![Wiring Diagram](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/wiringdiagram.png "Wiring Diagram")
     
 **DHT11 Humidistat**
 
@@ -172,23 +189,15 @@ Run the test
 >
 > DATA -> GPIO 16 / PIN 36
 >
-    
-## Setup Startup Scripts
+
+## Setup Startup Scripts, Temp Logger to API script each 3 minutes
 
 >$ `crontab -e`
 
 Add the following lines:
 
-`@reboot nohup python /home/pi/XXX.py >/dev/null 2>&1`
+`*/3 * * * * python /home/pi//MagicMirror/raspberrypi/temp-check.py`
 
 Verify the display starts working on reboot
 
 >$ `sudo reboot`
-
-## OPTIONAL: Temp Logger to API script each 10 minutes
-
->$ `crontab -e`
-
-Add the following lines:
-
-`*/10 * * * * python /home/pi/XXX/temp-check.py`

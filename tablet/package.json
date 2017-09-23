@@ -22,11 +22,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Weather",
-    "API",
+    "DHT11 Sensor",
+    "Raspberry Pi",
     "AngularJS",
-    "Bootstrap",
-    "Dark Sky"
+    "Bootstrap"
   ],
   "author": "Kevin Hinds <kevin@kevinhinds.com>",
   "license": "(MIT OR Apache-2.0)"

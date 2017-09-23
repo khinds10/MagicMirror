@@ -30,28 +30,7 @@ insideTemperature = int(avgTemperature * 9/5 + 32)
 avgHumidity = avgHumidity / readingCount
 insideHumidity = int(avgHumidity)
 
-# get current forecast from location
-weatherInfo = json.loads(subprocess.check_output(['curl', settings.weatherAPIURL + settings.weatherAPIKey + '/' + str(settings.latitude) + ',' + str(settings.longitude) + '?lang=en']))
-currentConditions = weatherInfo['currently']
-icon = str(currentConditions['icon'])
-apparentTemperature = str(int(currentConditions['apparentTemperature']))
-humidity = str(int(currentConditions['humidity'] * 100))
-windSpeed = str(int(currentConditions['windSpeed']))
-cloudCover = str(int(currentConditions['cloudCover'] * 100))
-precipProbability = str(int(currentConditions['precipProbability'] * 100))
-
-# minutely conditions, limit the characters to 30 in the summary
-minutelyConditions = weatherInfo['minutely']
-summary = str(minutelyConditions['summary'])
-summary = (summary[:27] + '...') if len(summary) > 29 else summary
-
-# conditions for the day
-dailyConditions = weatherInfo['daily']
-dailyConditions = dailyConditions['data'][0]
-apparentTemperatureMin = str(int(dailyConditions['apparentTemperatureMin']))
-apparentTemperatureMax = str(int(dailyConditions['apparentTemperatureMax']))
-
 # post to datahub
-r = requests.post("http://" + settings.deviceLoggerAPI + "/api/log/", data={'device': 'weather-clock', 'value1': str(insideTemperature), 'value2': str(insideHumidity) , 'value3': str(currentConditions['apparentTemperature']), 'value4': str(int(currentConditions['humidity'] * 100)), 'value5': str(summary)})
+r = requests.post("http://" + settings.deviceLoggerAPI + "/api/log/", data={'device': 'magic-mirror', 'value1': str(insideTemperature), 'value2': str(insideHumidity))
 print(r.status_code, r.reason)
 print(r.text)

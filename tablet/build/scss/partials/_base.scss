@@ -27,74 +27,9 @@ footer {
 	padding-top: 50px;
 }
 
-#current-conditions {
-	padding:10px;
-}
-
-.forecast-item {
-	padding-top: 50px;
-}
-
-.forecast-item-day {
-	font-style: italic;
-}
-
-#sunset-container {
-	padding-left: 200px;
-	font-style: italic;
-}
-   
-#forecast-list strong {
-	font-size: 75px;
-}
-
-#forecast-list {
-	font-size: 40px;
-}
-
-.forecast-item {
-	font-size: 40px;
-	padding-top: 50px;
-}
-
-.forecast-item-day {
-	font-size: 30px;
-	font-style: italic;
-}
-
 .summary {
 	font-size: 20px;
 	display:none;
-}
-
-#sunset-container {
-	padding: 0px;
-	margin: 0px;
-	font-size: 30px;
-	padding-left: 220px;
-	font-style: italic;
-}
-
-.extreme-temp {
-	font-size: 32px;
-}
-
-.extreme-temp-current {
-    font-size: 36px;
-    margin-top: 130px;
-    text-align: left;
-}
-
-#hourly-summary-container {
-    position: absolute; 
-    bottom: 10px; 
-    right: 0px; 
-    width: 100%;
-}
-
-#hourly-precipitation {
-    position: absolute; 
-    bottom: 80px;
 }
 
 .hourly-time-container {
@@ -159,25 +94,11 @@ footer {
     color: #a1c2d1;
 }
 
-#conditions {
-    position: absolute;
-    right: 5px;
-    bottom: 60px;
-    font-size: 175px;
-    color: #D1B3A1;
-}
-
-#humidity {
-    color: #a1c2d1;
-}
-
 #bottom-temps-container {
     bottom: 5px; 
     position: absolute; 
     width: 100%
 }
-
-
 
 #bedroom {
     padding-left: 10px; 

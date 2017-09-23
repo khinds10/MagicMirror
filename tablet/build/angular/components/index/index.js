@@ -32,9 +32,7 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
         var m = today.getMinutes();
 
         // add a zero in front of numbers<10
-        if (m < 10) {
-            m = "0" + m;
-        }
+        if (m < 10) m = "0" + m;
         
         // adjust for 12 time
         if (h > 12) h = h - 12;

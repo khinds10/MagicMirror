@@ -6,33 +6,7 @@ footer { background-color: black; padding: 10px; width: 100%; position: absolute
 
 #loading-container { padding-top: 50px; }
 
-#current-conditions { padding: 10px; }
-
-.forecast-item { padding-top: 50px; }
-
-.forecast-item-day { font-style: italic; }
-
-#sunset-container { padding-left: 200px; font-style: italic; }
-
-#forecast-list strong { font-size: 75px; }
-
-#forecast-list { font-size: 40px; }
-
-.forecast-item { font-size: 40px; padding-top: 50px; }
-
-.forecast-item-day { font-size: 30px; font-style: italic; }
-
 .summary { font-size: 20px; display: none; }
-
-#sunset-container { padding: 0px; margin: 0px; font-size: 30px; padding-left: 220px; font-style: italic; }
-
-.extreme-temp { font-size: 32px; }
-
-.extreme-temp-current { font-size: 36px; margin-top: 130px; text-align: left; }
-
-#hourly-summary-container { position: absolute; bottom: 10px; right: 0px; width: 100%; }
-
-#hourly-precipitation { position: absolute; bottom: 80px; }
 
 .hourly-time-container { margin: 0; padding: 0; min-width: 100px; }
 
@@ -48,11 +22,7 @@ footer { background-color: black; padding: 10px; width: 100%; position: absolute
 
 #seconds { font-size: 50px; }
 
-#conditions { position: absolute; right: 5px; bottom: 5px; font-size: 175px; color: #D1B3A1; }
-
-#humidity { color: #a1c2d1; }
-
-#conditions { position: absolute; right: 5px; bottom: 60px; font-size: 175px; color: #D1B3A1; }
+#conditions { position: absolute; right: 5px; bottom: 55px; font-size: 175px; color: #D1B3A1; }
 
 #humidity { color: #a1c2d1; }
 
@@ -77,10 +47,6 @@ h3 { font-weight: bolder; font-size: 50px; margin: 0px; }
 h1.indoor, h2.indoor, h3.indoor { padding: 0; margin: 0; display: inline; }
 
 .minute-summary { white-space: nowrap; width: 150%; overflow: hidden; padding-top: 10px; }
-
-.daily-summary { font-size: 20px; padding-left: 200px; padding-bottom: 15px; overflow: hidden; height: 25px; }
-
-#hourly-summary { font-size: 35px; font-style: italic; float: right; margin-right: 60px; width: 90%; overflow: hidden; height: 45px; }
 
 .medium-text { font-size: 28px; }
 

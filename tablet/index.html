@@ -30,10 +30,10 @@
         </h1>
         <h1 id="time" class="indoor">{{time}}</h1>
         <h2 id="date" class="indoor"></h2>
-        <h1 id="conditions" class="indoor">90&deg;F <span id="humidity">50%</span> </h1>
+        <h1 id="conditions" class="indoor">{{insideTemp}}&deg;F <span id="humidity">{{insideHmdty}}%</span> </h1>
         <div id="bottom-temps-container">
-            <h3 id="bedroom" class="indoor">Bed: <span class="pink-text">90&deg;F</span> <span id="humidity">50%</span></h3>
-            <h3 id="livingroom" class="indoor">Living: <span class="pink-text">90&deg;F</span> <span id="humidity">50%</span></h3>
+            <h3 id="bedroom" class="indoor">Bed: <span class="pink-text">{{bedroomTemp}}&deg;F</span> <span id="humidity">{{bedroomHmdty}}%</span></h3>
+            <h3 id="livingroom" class="indoor">Living: <span class="pink-text">{{livingroomTemp}}&deg;F</span> <span id="humidity">{{livingroomHmdty}}%</span></h3>
         </div>
     </body>
  </html>

@@ -39,10 +39,10 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
         
         // adjust time sizing based on if there is 4 or 5 characters for the time
         if (h > 9) {
-            document.getElementById("time").style.fontSize = "270px";
+            document.getElementById("time").style.fontSize = "250px";
             document.getElementById("time").style.paddingTop = "25px";
         } else {
-            document.getElementById("time").style.fontSize = "290px";
+            document.getElementById("time").style.fontSize = "270px";
             document.getElementById("time").style.paddingTop = "0px";
         }        
         $scope.time = h + ":" + m
@@ -53,5 +53,26 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
         }, 2000);
     };
     $scope.startTime();
-
+    
+    // get current devices conditions from the device HUB configured API
+    $scope.getWeatherConditions = function() {
+	    $http({
+	        url : '/server/conditions.php',
+	        method : "GET",
+	        data : {}
+	    }).then(function(response) {
+            $scope.insideTemp = response.data.mirror.value1;
+            $scope.insideHmdty = response.data.mirror.value2;
+            $scope.bedroomTemp = response.data.bedroom.value1;
+            $scope.bedroomHmdty = response.data.bedroom.value2;
+            $scope.livingroomTemp = response.data.livingroom.value1;
+            $scope.livingroomHmdty = response.data.livingroom.value2;
+	    });
+	
+        // loop the clock function every 3 minutes
+        setTimeout(function () {
+            $scope.getWeatherConditions();
+        }, 180000);
+	};
+    $scope.getWeatherConditions();
 }]);

@@ -20,6 +20,9 @@ date=dt.datetime.now()
 count, readingCount, avgTemperature, avgHumidity = [ 0, 0, 0, 0 ]
 while (count < 10):
     humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    print humidity
+    print temperature
+
     if humidity is not None and temperature is not None:
         avgTemperature = avgTemperature + temperature
         avgHumidity = avgHumidity + humidity
@@ -31,6 +34,6 @@ avgHumidity = avgHumidity / readingCount
 insideHumidity = int(avgHumidity)
 
 # post to datahub
-r = requests.post("http://" + settings.deviceLoggerAPI + "/api/log/", data={'device': 'magic-mirror', 'value1': str(insideTemperature), 'value2': str(insideHumidity))
+r = requests.post("http://" + settings.deviceLoggerAPI + "/api/log/", data={'device': 'magic-mirror', 'value1': str(insideTemperature), 'value2': str(insideHumidity)})
 print(r.status_code, r.reason)
 print(r.text)

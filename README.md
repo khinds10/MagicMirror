@@ -93,7 +93,7 @@ Add the following lines to have your raspberrypi automatically connect to your h
 >
 >$ `sudo apt-get upgrade`
 >
->$ `sudo apt-get install vim git python-smbus i2c-tools python-imaging python-smbus build-essential python-dev rpi.gpio python3 python3-pip libi2c-dev`
+>$ `sudo apt-get install vim git python-smbus i2c-tools python-imaging python-smbus build-essential python-dev rpi.gpio python3 python3-pip libi2c-dev python-requests`
 
 **Update local timezone settings**
 
@@ -199,6 +199,8 @@ https://github.com/khinds10/WeatherTablet
 https://github.com/khinds10/DeviceHub
 
 ## Setup Startup Scripts, Temp Logger to API script each 3 minutes
+
+In the `raspberrypi` folder of the project copy the `settings.shadown.py` file to `settings.py` with the host file of the DeviceHub project above you have setup.
 
 >$ `crontab -e`
 

@@ -1,5 +1,5 @@
 # Magic Mirror
-####Wall Based Magic Mirror for Current Weather & Time
+#### Wall Based Magic Mirror for Current Weather & Time
 
 ![Magic Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/MagicMirror.jpg "Magic Mirror")
 
@@ -197,12 +197,17 @@ Run the test
 In the **/construction** folder of the project 3D print the following attachments to build the picture frame borders and tablet holders
 
 **Print the Following Tablet Holders:**
-*3d-print-tablet-mounts/files/tabletMountLeft.stl
+
+3d-print-tablet-mounts/files/tabletMountLeft.stl
+
 3d-print-tablet-mounts/files/tabletMountRight.stl
-*
+
 **Print the Following Frame Corner blocks and balsa wood attachments:**
-*mirror-corner-blocks.stl
+
+mirror-corner-blocks.stl
+
 mirror-corners.stl
+
 mirror-sides.stl*
 
 ![3D Printed](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/3DPrinted.jpg "3D Printed")

@@ -1,5 +1,7 @@
 # Magic Mirror
-Wall Based Magic Mirror for Current Weather & Time
+####Wall Based Magic Mirror for Current Weather & Time
+
+![Magic Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/MagicMirror.jpg "Magic Mirror")
 
 #### Flashing RaspberriPi Hard Disk / Install Required Software (Using Ubuntu Linux)
 
@@ -155,31 +157,31 @@ Run the test
 
 **12" x 24" Acrylic See-Through Mirror, 3mm**
 
-![Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/mirror.jpg "Mirror")
+![Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/Mirror.jpg "Mirror")
 
 **Balsa wood strips 0.125 x 0.5 Inches**
 
-![Balsa Wood](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/balsawood.jpg "Balsa Wood")
+![Balsa Wood](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/BalsaWood.jpg "Balsa Wood")
 
 **ArtToFrames 12x24 inch Satin Black Picture Frame**
 
-![Picture Frame](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/frame.jpg "Picture Frame")
+![Frame](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/Frame.jpg "Frame")
 
 **Android Tablets (x2)**
 
-![Android Tablet](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/tablet.jpg "Android Tablet")
+![Tablet](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/Tablet.jpg "Tablet")
 
 **DHT11 Humidistat**
 
-![DHT11 Humidistat](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/dht11.jpg "DHT11 Humidistat")
+![DHT11](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/DHT11.jpg "DHT11")
 
 **RaspberriPi Zero (or Regular RaspberriPi should work)**
 
-![Pi Zero](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/pizero.jpg "Pi Zero")
+![PiZero](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/PiZero.jpg "PiZero")
 
 ## Build and wire the device
 
-![Wiring Diagram](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/wiringdiagram.png "Wiring Diagram")
+![Wiring Diagram](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/WiringDiagram.png "Wiring Diagram")
     
 **DHT11 Humidistat**
 
@@ -189,6 +191,33 @@ Run the test
 >
 > DATA -> GPIO 16 / PIN 36
 >
+
+### 3D Print
+
+In the **/construction** folder of the project 3D print the following attachments to build the picture frame borders and tablet holders
+
+**Print the Following Tablet Holders:**
+*3d-print-tablet-mounts/files/tabletMountLeft.stl
+3d-print-tablet-mounts/files/tabletMountRight.stl
+*
+**Print the Following Frame Corner blocks and balsa wood attachments:**
+*mirror-corner-blocks.stl
+mirror-corners.stl
+mirror-sides.stl*
+
+![3D Printed](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/3DPrinted.jpg "3D Printed")
+
+### Assembly
+
+Gather together the frame balsa wood strips and the 3D printed attachments
+
+![Supplies](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/Supplies.jpg "Supplies")
+
+
+![Assemble Frame](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AssembleFrame.png "Assemble Frame")
+![Attach Board](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachBoard.jpg "Attach Board")
+![Attach Wall](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachWall.jpg "Attach Wall")
+![Screw Corners](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/ScrewCorner.jpg "Screw Corners")
 
 ## Create the Device Hub Project hosted on a PHP enabled webhost of your choice for the top tablet to get data
 

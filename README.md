@@ -190,13 +190,13 @@ Run the test
 > DATA -> GPIO 16 / PIN 36
 >
 
-## Create Weather Tablet Project for the Top tablet 
-
-https://github.com/khinds10/WeatherTablet
-
-## Create the Device Hub Project hosted on a PHP enabled webhost of your choice for the bottom tablet
+## Create the Device Hub Project hosted on a PHP enabled webhost of your choice for the top tablet to get data
 
 https://github.com/khinds10/DeviceHub
+
+## Create Weather Tablet Project for the bottom tablet 
+
+https://github.com/khinds10/WeatherTablet
 
 ## Setup Startup Scripts, Temp Logger to API script each 3 minutes
 
@@ -217,8 +217,8 @@ Verify the display starts working on reboot
 Create a PHP enabled website online with the contents of the "tablet" folder in this project.
 
 Configure the website:
-  In the "tablet/server" folder of the project, copy the config.shadow.php file to a file named "config.php"
-  Edit the "config.php" configure the $deviceHubAPI value to point to the device hub of your choosing from the referenced project above (https://github.com/khinds10/DeviceHub)
+  In the "**tablet/server**" folder of the project, copy the config.shadow.php file to a file named "**config.php**"
+  Edit the "**config.php**" configure the $deviceHubAPI value to point to the device hub of your choosing from the referenced project above (https://github.com/khinds10/DeviceHub)
 
 Example Apache2 Configuration File for the tablet clock PHP website
 
@@ -234,4 +234,5 @@ Example Apache2 Configuration File for the tablet clock PHP website
 > 	        Require all granted
 > 	</Directory>
 > </VirtualHost>
-> 
+
+**FINISHED!**

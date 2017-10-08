@@ -194,7 +194,7 @@ Run the test
 
 ### 3D Print
 
-In the **/construction** folder of the project 3D print the following attachments to build the picture frame borders and tablet holders
+In the **/construction** folder of the project 3D print the following attachments to build the picture frame borders and tablet holders.
 
 **Print the Following Tablet Holders:**
 *3d-print-tablet-mounts/files/tabletMountLeft.stl
@@ -213,11 +213,24 @@ Gather together the frame balsa wood strips and the 3D printed attachments
 
 ![Supplies](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/Supplies.jpg "Supplies")
 
+Assemble the balsawood strips inside the corner brackets (sliding the balsawood through the side brackets, make sure they're square against the corners of the picture frame.  Paint everything black with spray paint.
 
 ![Assemble Frame](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AssembleFrame.png "Assemble Frame")
-![Attach Board](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachBoard.jpg "Attach Board")
-![Attach Wall](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachWall.jpg "Attach Wall")
+
+Screw the corners to the 4 corner blocks to hold the frame together.
 ![Screw Corners](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/ScrewCorner.jpg "Screw Corners")
+
+Attach the tablets and Raspberry PiZero to the wood to eventually fix to the wall. 
+
+![Attach Board](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachBoard.jpg "Attach Board")
+
+Attach to the wall the board. *(Note the 2 screws on the top left and right, they will be used to hold up the picture frame with frame border attached to place in front of the tablets to shine through the mirror)*
+
+![Attach Wall](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/AttachWall.jpg "Attach Wall")
+
+Finally replace the cardboard piece inside the picture frame with a two way mirror and on each corner of the picture frame screw into the corner *(3D printed)* blocks to hold the picture frame to the frame border.
+
+![Magic Mirror](https://raw.githubusercontent.com/khinds10/MagicMirror/master/images/MagicMirror.jpg "Magic Mirror")
 
 ## Create the Device Hub Project hosted on a PHP enabled webhost of your choice for the top tablet to get data
 

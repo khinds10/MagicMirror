@@ -267,29 +267,29 @@ Configure the website:
 
 Example Apache2 Configuration File for the tablet clock PHP website
 
-> <VirtualHost *:80>
->
-> 	DocumentRoot /var/www/tablet
->
-> 	ServerName myclocktablet.com
->
-> 	ServerAdmin webmaster@myclocktablet.com
->
-> 	ErrorLog ${APACHE_LOG_DIR}/error-clock-tablet.log
->
-> 	CustomLog ${APACHE_LOG_DIR}/access-clock-tablet.log combined
->
-> 	<Directory /var/www/tablet>
->
-> 	        Options FollowSymLinks
->
-> 	        AllowOverride All
->
-> 	        Require all granted
->
-> 	</Directory>
->
-> </VirtualHost>
->
+<VirtualHost *:80>
+
+	DocumentRoot /var/www/tablet
+
+	ServerName myclocktablet.com
+
+	ServerAdmin webmaster@myclocktablet.com
+
+	ErrorLog ${APACHE_LOG_DIR}/error-clock-tablet.log
+
+	CustomLog ${APACHE_LOG_DIR}/access-clock-tablet.log combined
+
+	<Directory /var/www/tablet>
+
+	        Options FollowSymLinks
+
+	        AllowOverride All
+
+	        Require all granted
+
+	</Directory>
+
+</VirtualHost>
+
 
 **FINISHED!**

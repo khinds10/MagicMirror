@@ -39,7 +39,7 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
         
         // adjust time sizing based on if there is 4 or 5 characters for the time
         if (h > 9) {
-            document.getElementById("time").style.fontSize = "250px";
+            document.getElementById("time").style.fontSize = "235px";
             document.getElementById("time").style.paddingTop = "25px";
         } else {
             document.getElementById("time").style.fontSize = "270px";

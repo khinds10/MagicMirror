@@ -21,32 +21,28 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
 
     // start the date time clock running by setTimeout every 2 seconds
     $scope.startTime = function() {
-        var d = new Date(), months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-        console.log('JS date is: ' + d);
-        
-        $scope.dayNumber = d.getDate();
-        $scope.dayOfWeek = days[d.getDay()];
-        
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
+    
+        // get time from server with date info
+    	$http({
+	        url : '/server/time.php',
+	        method : "GET",
+	        data : {}
+	    }).then(function(response) {
+            $scope.dayNumber = response.data.dayNumber;
+            $scope.dayOfWeek = response.data.dayName;
+            $scope.time = response.data.time;
+            $scope.hour = response.data.hour;
+	    });
 
-        // add a zero in front of numbers<10
-        if (m < 10) m = "0" + m;
-        
-        // adjust for 12 time
-        if (h > 12) h = h - 12;
-        
         // adjust time sizing based on if there is 4 or 5 characters for the time
-        if (h > 9) {
+        if ($scope.hour > 9) {
             document.getElementById("time").style.fontSize = "235px";
             document.getElementById("time").style.paddingTop = "25px";
         } else {
             document.getElementById("time").style.fontSize = "270px";
             document.getElementById("time").style.paddingTop = "0px";
         }        
-        $scope.time = h + ":" + m
-        
+                
         // loop the clock function every 2 seconds
         setTimeout(function () {
             $scope.startTime();

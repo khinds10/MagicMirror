@@ -23,6 +23,11 @@ footer {
 	left:0;
 }
 
+#home-heatmap {
+    max-height: 470px;
+    width: 485px;
+}
+
 #loading-container {
 	padding-top: 50px;
 }
@@ -40,7 +45,7 @@ footer {
 
 #time {
     position: absolute;
-    font-size: 225px;
+    font-size: 305px;
     padding-left: 10px;
     padding-top: 10px;
     text-align:center;
@@ -95,7 +100,8 @@ footer {
 }
 
 #bottom-temps-container {
-    bottom: 5px; 
+    padding: 10px;
+    bottom: 25%; 
     position: absolute; 
     width: 100%
 }

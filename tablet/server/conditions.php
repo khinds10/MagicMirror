@@ -20,7 +20,10 @@ require 'config.php';
 // get the results for the 3 devices
 $livingRoomConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock"));
 $bedroomConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock-white"));
-$magicMirrorConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=magic-mirror"));
+$samsRoomConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock-red"));
+$guestRoomConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock-yellow"));
+$basementConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock-gray"));
+$kitchenConditions = json_decode(cURL("http://{$deviceHubAPI}/api/read/?device=weather-clock-small-white"));
 
 // get the most recent result and encode as JSON for the magic mirror to display
 $conditionsResults = array();
@@ -31,10 +34,22 @@ if (isset($livingRoomConditions[0])) $conditionsResults['livingroom'] = $livingR
 $conditionsResults['bedroom'] = array();
 if (isset($bedroomConditions[0])) $conditionsResults['bedroom'] = $bedroomConditions[0];
 
-$conditionsResults['mirror'] = array();
-if (isset($magicMirrorConditions[0])) $conditionsResults['mirror'] = $magicMirrorConditions[0];
+$conditionsResults['sam'] = array();
+if (isset($samsRoomConditions[0])) $conditionsResults['sam'] = $samsRoomConditions[0];
 
-echo json_encode($conditionsResults);
+$conditionsResults['guest'] = array();
+if (isset($guestRoomConditions[0])) $conditionsResults['guest'] = $guestRoomConditions[0];
+
+$conditionsResults['basement'] = array();
+if (isset($basementConditions[0])) $conditionsResults['basement'] = $basementConditions[0];
+
+$conditionsResults['kitchen'] = array();
+if (isset($kitchenConditions[0])) $conditionsResults['kitchen'] = $kitchenConditions[0];
+
+// get humidity and temp color for output
+$conditionsResults['kitchen']->tempColor = cURL("http://{$temperatureColorAPI}/?temperature=" . $conditionsResults['kitchen']->value1);
+$conditionsResults['kitchen']->humidityColor = cURL("http://{$temperatureColorAPI}/humidity?humidity=" . $conditionsResults['kitchen']->value2);
+echo json_encode($conditionsResults, JSON_PRETTY_PRINT);
 
 /**
  * get the response from the API to send to the JS 
@@ -44,9 +59,7 @@ echo json_encode($conditionsResults);
 function cURL($URL) {
 
     // is cURL installed yet?
-    if (!function_exists('curl_init')) {
-        die('Sorry cURL is not installed!');
-    }
+    if (!function_exists('curl_init')) die('Sorry cURL is not installed!');
     
     // download response from URL
     $ch = curl_init();

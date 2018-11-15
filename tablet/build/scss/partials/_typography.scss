@@ -6,7 +6,7 @@ h1 {
 
 h2 {
 	font-weight: bolder; 
-	font-size: 100px;
+	font-size: 135px;
 	margin: 0px;
 }
 
@@ -16,10 +16,18 @@ h3 {
 	margin: 0px;
 }
 
+h4 {
+    font-size: 35px;
+}
+
 h1.indoor, h2.indoor, h3.indoor {
     padding:0;
     margin:0;
     display:inline;
+}
+
+.indoor-conditions-values {
+    font-size: 135px;
 }
 
 .minute-summary {

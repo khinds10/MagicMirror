@@ -4,13 +4,15 @@ body { background-color: black; color: white; width: 1280px; height: 800px; max-
 
 footer { background-color: black; padding: 10px; width: 100%; position: absolute; bottom: 0; left: 0; }
 
+#home-heatmap { max-height: 470px; width: 485px; }
+
 #loading-container { padding-top: 50px; }
 
 .summary { font-size: 20px; display: none; }
 
 .hourly-time-container { margin: 0; padding: 0; min-width: 100px; }
 
-#time { position: absolute; font-size: 225px; padding-left: 10px; padding-top: 10px; text-align: center; width: 65%; }
+#time { position: absolute; font-size: 305px; padding-left: 10px; padding-top: 10px; text-align: center; width: 65%; }
 
 #dateBox { position: absolute; top: 20px; right: 10px; width: 325px; height: 290px; background-color: rgba(255, 255, 255, 0.7); }
 
@@ -26,7 +28,7 @@ footer { background-color: black; padding: 10px; width: 100%; position: absolute
 
 #humidity { color: #a1c2d1; }
 
-#bottom-temps-container { bottom: 5px; position: absolute; width: 100%; }
+#bottom-temps-container { padding: 10px; bottom: 25%; position: absolute; width: 100%; }
 
 #bedroom { padding-left: 10px; float: left; font-size: 60px; width: 50%; text-align: left; }
 
@@ -40,11 +42,15 @@ footer { background-color: black; padding: 10px; width: 100%; position: absolute
 
 h1 { font-weight: bolder; font-size: 200px; margin: 0px; }
 
-h2 { font-weight: bolder; font-size: 100px; margin: 0px; }
+h2 { font-weight: bolder; font-size: 135px; margin: 0px; }
 
 h3 { font-weight: bolder; font-size: 50px; margin: 0px; }
 
+h4 { font-size: 35px; }
+
 h1.indoor, h2.indoor, h3.indoor { padding: 0; margin: 0; display: inline; }
+
+.indoor-conditions-values { font-size: 135px; }
 
 .minute-summary { white-space: nowrap; width: 150%; overflow: hidden; padding-top: 10px; }
 

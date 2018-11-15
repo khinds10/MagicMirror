@@ -33,15 +33,6 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
             $scope.time = response.data.time;
             $scope.hour = response.data.hour;
 	    });
-
-        // adjust time sizing based on if there is 4 or 5 characters for the time
-        if ($scope.hour > 9) {
-            document.getElementById("time").style.fontSize = "235px";
-            document.getElementById("time").style.paddingTop = "25px";
-        } else {
-            document.getElementById("time").style.fontSize = "270px";
-            document.getElementById("time").style.paddingTop = "0px";
-        }        
                 
         // loop the clock function every 2 seconds
         setTimeout(function () {
@@ -57,12 +48,7 @@ indexController.controller("indoorConditionsController", [ '$scope', '$http', '$
 	        method : "GET",
 	        data : {}
 	    }).then(function(response) {
-            $scope.insideTemp = response.data.mirror.value1;
-            $scope.insideHmdty = response.data.mirror.value2;
-            $scope.bedroomTemp = response.data.bedroom.value1;
-            $scope.bedroomHmdty = response.data.bedroom.value2;
-            $scope.livingroomTemp = response.data.livingroom.value1;
-            $scope.livingroomHmdty = response.data.livingroom.value2;
+	        $scope.conditionsData = response.data;
 	    });
 	
         // loop the clock function every 3 minutes

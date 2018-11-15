@@ -7,3 +7,4 @@
 * 				Never check in your own 'config.php' to GIT, you can give away your passwords if it's a public repo
 */
 $deviceHubAPI = 'mydevicelogger.com';
+$temperatureColorAPI = 'mytempcolorapi.com';

@@ -24,16 +24,21 @@
        <![endif]-->
     </head>
     <body style="overflow:hidden;" ng-controller="indoorConditionsController">
-        <h1 id="dateBox" class="indoor">
+        <h1 id="dateBox">
             <strong id="dayOfWeek">{{dayOfWeek}}</strong><br/>
             <strong id="dayNumber">{{dayNumber}}</strong>
         </h1>
-        <h1 id="time" class="indoor">{{time}}</h1>
-        <h2 id="date" class="indoor"></h2>
-        <!--h1 id="conditions" class="indoor">{{insideTemp}}&deg;F <span id="humidity">{{insideHmdty}}%</span> </h1-->
-        <div id="bottom-temps-container">
-            <h3 id="bedroom" class="indoor">Bed: <span class="pink-text">{{bedroomTemp}}&deg;F</span> <span id="humidity">{{bedroomHmdty}}%</span></h3>
-            <h3 id="livingroom" class="indoor">Living: <span class="pink-text">{{livingroomTemp}}&deg;F</span> <span id="humidity">{{livingroomHmdty}}%</span></h3>
+        <h1 id="time">{{time}}</h1>
+        <h2 id="date"></h2>
+        <div id="bottom-temps-container" style="top: 30%; padding: 40px;">
+            <div class="row">
+                <table style="width: 100%">
+                  <tr>
+                    <td><br/><br/><img id="home-heatmap" src="/img/house.jpg"/></td>
+                    <td><h2 class="indoor-conditions-values"><span class="pink-text" style="color:{{conditionsData.kitchen.tempColor}}">{{conditionsData.kitchen.value1}}&deg;F</span> <span id="humidity" style="color:{{conditionsData.kitchen.humidityColor}}">{{conditionsData.kitchen.value2}}%</span></h2></td>
+                  </tr>
+                </table>
+            </div>
         </div>
     </body>
  </html>
